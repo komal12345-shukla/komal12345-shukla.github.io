@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Komal Shukla — Data Analyst & BI Developer</title>
+  <meta name="description" content="Komal Shukla — data and reporting analyst in Vancouver, BC. SQL, Python, Tableau, Power BI and AWS Athena. Dimensional modeling, regulatory reporting and data quality at scale.">
+  <meta property="og:title" content="Komal Shukla — Data and Reporting Analyst">
+  <meta property="og:description" content="Data and reporting analyst in Vancouver, BC. SQL, Python, Tableau, Power BI, AWS Athena.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://komal12345-shukla.github.io/">
+  <meta name="twitter:card" content="summary">
+  <title>Komal Shukla — Data and Reporting Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -200,7 +206,7 @@
     .exp-list li::before { content: '▹'; position: absolute; left: 0; color: var(--teal); }
 
     /* PROJECTS */
-    .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.35rem; }
+    .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.35rem; }
     .proj-card {
       background: var(--card); border: 1px solid var(--border); border-radius: 16px;
       padding: 1.75rem; display: flex; flex-direction: column; gap: 0.85rem;
@@ -220,6 +226,15 @@
     .proj-title { font-size: 1rem; font-weight: 700; color: var(--text-bright); line-height: 1.3; }
     .proj-desc { font-size: 0.855rem; color: var(--text); line-height: 1.65; flex: 1; }
     .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .proj-card.feature { grid-column: 1 / -1; }
+    .proj-card.feature .proj-title { font-size: 1.3rem; }
+    .proj-card.feature::before { opacity: 1; }
+    .proj-note {
+      font-family: 'Fira Code', monospace; font-size: 0.6rem; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--text); opacity: 0.55;
+      border: 1px solid var(--border); padding: 0.12rem 0.45rem; border-radius: 4px;
+      margin-left: 0.55rem; vertical-align: middle; white-space: nowrap;
+    }
     .proj-tag {
       font-family: 'Fira Code', monospace; font-size: 0.7rem;
       background: var(--purple-glow); border: 1px solid rgba(124,58,237,0.25);
@@ -273,10 +288,30 @@
 
     /* RESPONSIVE */
     @media(max-width:800px){
-      nav{padding:1rem 1.5rem} nav.scrolled{padding:0.75rem 1.5rem}
-      .nav-links{display:none}
+      nav{padding:1rem 1.25rem} nav.scrolled{padding:0.75rem 1.25rem}
+      .nav-links{
+        gap:1.1rem; font-size:0.76rem; max-width:62vw;
+        overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+      }
+      .nav-links::-webkit-scrollbar{display:none}
+      .nav-links a{white-space:nowrap}
       .about-grid{grid-template-columns:1fr;gap:2.5rem}
       .hero-name{letter-spacing:-1.5px}
+      .container{padding:0 1.25rem}
+      section{padding:4rem 0}
+      .exp-top{flex-direction:column; align-items:flex-start; gap:0.4rem}
+      .exp-card{padding:1.35rem}
+      .timeline{padding-left:1.1rem}
+      .tl-item{padding-left:1.5rem}
+      .tl-dot{left:-1.95rem}
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; }
+      #hero-canvas { display: none; }
+      .hero-typewriter span { border-right: none; }
     }
   </style>
 </head>
@@ -301,12 +336,12 @@
   <div class="hero-content">
     <div class="hero-badge">
       <span class="badge-dot"></span>
-      Open to Work &middot; Vancouver, BC &amp; Remote (US)
+      Vancouver, British Columbia
     </div>
     <h1 class="hero-name">Komal Shukla</h1>
     <div class="hero-typewriter" id="typewriter"><span></span></div>
     <p class="hero-desc">
-      7+ years turning messy data into executive-ready insights. Healthcare analytics, BI dashboards, ML pipelines. I make data work hard so your decisions don&rsquo;t have to guess.
+      Seven years of professional experience, the last two in data and reporting. Claims, campaign and market analytics. I make the number defensible before I make it pretty.
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="btn-primary">View My Work</a>
@@ -327,15 +362,15 @@
         <div class="eyebrow">// who I am</div>
         <h2 class="sec-title">Data Analyst &amp;<br>BI Developer</h2>
         <div class="sec-line"></div>
-        <p>I&rsquo;m a Data Analyst with <strong>7+ years of experience</strong> delivering executive dashboards, automated reporting pipelines, and actionable insights, primarily across <span class="hl">healthcare and compliance</span> environments.</p>
-        <p>Currently at <strong>Cigna Healthcare</strong>, I lead Medicaid Runout reporting for multi-state programs, processing millions of claims records with Teradata SQL and AWS Athena while building Tableau dashboards that replaced manual spreadsheet workflows.</p>
-        <p>Northeastern MS Analytics grad (<span class="hl">GPA 3.98</span>), skilled in SQL, Python, Tableau, Power BI, and AWS. Based in Vancouver, BC, open to roles across Canada and the US.</p>
+        <p>I am a data and reporting analyst with <strong>seven years of professional experience</strong>, the last two in analytics. The work has spanned <span class="hl">energy markets, campaign and growth analytics in education, and healthcare claims</span>.</p>
+        <p>Currently at <strong>Cigna Healthcare</strong>, I own the weekly Medicaid runout reporting cycle for multi-state programs, working millions of claims records through Teradata SQL and AWS Athena, and building Tableau dashboards that replaced manual spreadsheet workflows.</p>
+        <p>What carries across all of it is the same thing: large, complex datasets where the number has to hold up, and business partners who need it in a form they can act on. Northeastern MPS Analytics, <span class="hl">GPA 3.98</span>. Based in Vancouver, BC.</p>
       </div>
       <div class="stats-grid reveal">
-        <div class="stat-card"><span class="stat-num">7+</span><div class="stat-lbl">Years of Experience</div></div>
+        <div class="stat-card"><span class="stat-num">7</span><div class="stat-lbl">Years Professional Experience</div></div>
         <div class="stat-card"><span class="stat-num">3.98</span><div class="stat-lbl">Graduate GPA &middot; Northeastern</div></div>
         <div class="stat-card"><span class="stat-num">14+</span><div class="stat-lbl">Federal Reports Delivered</div></div>
-        <div class="stat-card"><span class="stat-num">8</span><div class="stat-lbl">Portfolio Projects</div></div>
+        <div class="stat-card"><span class="stat-num">21</span><div class="stat-lbl">Automated Data Quality Tests</div></div>
       </div>
     </div>
   </div>
@@ -418,7 +453,7 @@
         <div class="exp-card">
           <div class="exp-top"><div class="exp-company">Cigna Healthcare</div><div class="exp-date">Mar 2025 &ndash; Present</div></div>
           <div class="exp-role">Associate Data &amp; Reporting Analyst</div>
-          <div class="exp-loc">&#128205; Hartford, CT</div>
+          <div class="exp-loc">&#128205; Remote</div>
           <ul class="exp-list">
             <li>Lead end-to-end Medicaid Runout reporting for multi-state programs, delivering 14 recurring reports to federal government stakeholders and resolving ~5 ad hoc data requests weekly</li>
             <li>Optimized large-scale healthcare data pipelines by migrating complex SQL Server logic to Teradata SQL and tuning AWS Athena queries against S3 data lakes, processing millions of claims records</li>
@@ -524,60 +559,25 @@
     </div>
     <div class="proj-grid">
 
+      <div class="proj-card feature reveal">
+        <div class="proj-top"><div class="proj-icon">&#127973;</div><a href="https://github.com/komal12345-shukla/claims-warehouse" target="_blank" rel="noopener" class="proj-gh">&#8599; GitHub</a></div>
+        <div class="proj-title">Healthcare Claims Warehouse</div>
+        <div class="proj-desc">A dimensional warehouse built end to end in SQL: raw ingestion, a third-normal-form staging layer with primary keys enforced, a Kimball star with a Type 2 member dimension, and three facts at three grains. The reporting layer builds a claim lag development triangle, fits completion factors on fully developed months only, and estimates IBNR reserves against a stated valuation date, then back-tests those estimates at 4.64% mean absolute error. 21 data quality tests gate the build, and the reconciliation tests earned their place: an early join fanned out whenever a member had two encounters on one day, duplicating 780 claims and $3.9M in billed charges. Nothing in the report looked wrong. The test failed immediately. Runs on DuckDB with no server and no cloud account; all data is synthetic and Synthea-compatible.</div>
+        <div class="proj-tags"><span class="proj-tag">DuckDB</span><span class="proj-tag">SQL</span><span class="proj-tag">Python</span><span class="proj-tag">Dimensional Modeling</span><span class="proj-tag">Type 2 SCD</span><span class="proj-tag">Data Quality</span><span class="proj-tag">IBNR</span></div>
+      </div>
+
       <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#127968;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">ML Price Prediction &mdash; Airbnb NYC</div>
-        <div class="proj-desc">End-to-end regression pipeline benchmarking Random Forest, GBM, XGBoost, CatBoost &amp; LightGBM. CatBoost delivered best RMSE (187.27). Identified neighborhood &amp; room type as dominant price drivers via grid search &amp; cross-validation.</div>
+        <div class="proj-top"><div class="proj-icon">&#127968;</div><a href="https://github.com/komal12345-shukla/AirbnbAnalysis" target="_blank" rel="noopener" class="proj-gh">&#8599; GitHub</a></div>
+        <div class="proj-title">Price Prediction &mdash; Airbnb NYC<span class="proj-note">coursework</span></div>
+        <div class="proj-desc">Regression pipeline benchmarking Random Forest, GBM, XGBoost, CatBoost and LightGBM. CatBoost gave the best RMSE at 187.27. Neighborhood and room type came out as the dominant price drivers under grid search and cross-validation.</div>
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">XGBoost</span><span class="proj-tag">CatBoost</span><span class="proj-tag">Feature Engineering</span></div>
       </div>
 
       <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#128138;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">A/B Testing Framework &mdash; Pharma QA</div>
-        <div class="proj-desc">Validated an 80,000-unit drug batch using binomial modeling &amp; 95% confidence intervals. Designed A/B framework comparing marketing taglines with Type I/II error analysis &mdash; improved decision accuracy ~30%.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">A/B Testing</span><span class="proj-tag">Hypothesis Testing</span><span class="proj-tag">Statistics</span></div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#128179;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">Loan Default Risk Analysis</div>
-        <div class="proj-desc">EDA and risk segmentation on 300K+ records to identify high-risk borrowers. Full ML classification pipeline delivering actionable segments and risk scores for credit decision teams.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">EDA</span><span class="proj-tag">Risk Analytics</span><span class="proj-tag">Scikit-learn</span></div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#127919;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">Lead Scoring Model &mdash; EdTech</div>
-        <div class="proj-desc">Logistic regression + feature engineering achieving 92% accuracy and ROC-AUC of 0.97. Enabled sales prioritization of high-intent leads &mdash; estimated 25&ndash;30% gain in sales efficiency.</div>
+        <div class="proj-top"><div class="proj-icon">&#127919;</div><a href="https://github.com/komal12345-shukla/Lead-Scoring" target="_blank" rel="noopener" class="proj-gh">&#8599; GitHub</a></div>
+        <div class="proj-title">Lead Scoring Model &mdash; EdTech<span class="proj-note">coursework</span></div>
+        <div class="proj-desc">Logistic regression with feature engineering, reaching 92% accuracy and an ROC-AUC of 0.97 on held-out data. Ranks leads by conversion likelihood so a sales team can work the top decile first.</div>
         <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Logistic Regression</span><span class="proj-tag">ROC-AUC 0.97</span><span class="proj-tag">Feature Engineering</span></div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#128664;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">Car Price Prediction &mdash; US Market Entry</div>
-        <div class="proj-desc">Ridge regression model (R&sup2;=0.89, RMSE &plusmn;$2,600) supporting Geely Auto&rsquo;s US pricing strategy. Quantified impact of engine size, horsepower, and brand tier for product &amp; pricing teams.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Ridge / Lasso</span><span class="proj-tag">Regression</span><span class="proj-tag">Market Analytics</span></div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#8383;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">Bitcoin Price Forecasting</div>
-        <div class="proj-desc">ARIMA time series with ADF stationarity testing, ACF/PACF analysis, and 30-day rolling forecast achieving MAPE ~4.2%. Detected volume-price correlation signaling major moves 1&ndash;2 days ahead.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">ARIMA</span><span class="proj-tag">Time Series</span><span class="proj-tag">Statsmodels</span></div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#127866;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">Recommendation Engine &mdash; BeerMart</div>
-        <div class="proj-desc">User-based &amp; item-based collaborative filtering with cosine similarity. Solved cold-start problem via popularity baseline. Estimated 15&ndash;20% increase in product discovery for active users.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Collaborative Filtering</span><span class="proj-tag">Cosine Similarity</span><span class="proj-tag">Scikit-learn</span></div>
-      </div>
-
-      <div class="proj-card reveal">
-        <div class="proj-top"><div class="proj-icon">&#127758;</div><a href="https://github.com/komal12345-shukla" target="_blank" class="proj-gh">&#8599; GitHub</a></div>
-        <div class="proj-title">India GDP Sector Analysis</div>
-        <div class="proj-desc">Multi-dimensional GSDP analysis across 30+ states and 3 sectors. Identified structural shifts, high-growth states, and agricultural dependency risks. Delivered 3 actionable investment &amp; policy recommendations.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">Seaborn</span><span class="proj-tag">Policy Analytics</span></div>
       </div>
 
     </div>
@@ -638,27 +638,27 @@
       <div class="eyebrow">// let&rsquo;s connect</div>
       <h2 class="sec-title">Get In Touch</h2>
       <div class="sec-line" style="margin: 0 auto 2rem;"></div>
-      <p>I&rsquo;m actively looking for <strong style="color:var(--text-bright)">Data Analyst and BI Developer</strong> roles in Vancouver, BC and remote positions across North America. Whether you have an opportunity, a question, or just want to say hi &mdash; my inbox is always open.</p>
+      <p>I work on reporting and analytics in <strong style="color:var(--text-bright)">Vancouver, BC</strong>. If you have a question, an opportunity, or just want to compare notes on claims data and completion factors, my inbox is open.</p>
       <div class="contact-links">
-        <a href="mailto:komal.shukla.ksks@gmail.com" class="c-link">
+        <a href="mailto:shukla.komal.ksks@gmail.com" class="c-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           Email Me
         </a>
-        <a href="https://www.linkedin.com/in/komal-shukla-ksks/" target="_blank" class="c-link">
+        <a href="https://www.linkedin.com/in/komal-shukla-ksks/" target="_blank" rel="noopener" class="c-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7H10V9h4v1.765C14.396 9.54 15.534 9 17 9a6 6 0 0 1-1-1z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
-        <a href="https://github.com/komal12345-shukla" target="_blank" class="c-link">
+        <a href="https://github.com/komal12345-shukla" target="_blank" rel="noopener" class="c-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
         </a>
       </div>
-      <a href="mailto:komal.shukla.ksks@gmail.com" class="btn-primary">Say Hello &#128075;</a>
+      <a href="mailto:shukla.komal.ksks@gmail.com" class="btn-primary">Say Hello &#128075;</a>
     </div>
   </div>
 </section>
 
-<footer><p>Designed &amp; built by Komal Shukla &middot; Vancouver, BC &middot; 2025</p></footer>
+<footer><p>Designed and built by Komal Shukla &middot; Vancouver, BC &middot; 2026</p></footer>
 
 <script>
 /* PARTICLE CANVAS */
@@ -692,11 +692,18 @@ class Dot {
   }
 }
 
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 function init() {
-  const n = Math.min(Math.floor(W * H / 9500), 130);
+  const n = Math.min(Math.floor(W * H / 14000), 90);
   pts = Array.from({ length: n }, () => new Dot());
 }
 init();
+
+/* pause the canvas once the hero scrolls away */
+let heroVisible = true;
+new IntersectionObserver(es => { heroVisible = es[0].isIntersecting; }, { threshold: 0 })
+  .observe(document.getElementById('hero'));
 
 function drawLines() {
   const n = pts.length;
@@ -722,19 +729,22 @@ function drawLines() {
   }
 }
 
-(function loop() {
-  ctx.clearRect(0, 0, W, H);
-  pts.forEach(p => { p.step(); p.draw(); });
-  drawLines();
-  requestAnimationFrame(loop);
-})();
+if (!reduceMotion) {
+  (function loop() {
+    requestAnimationFrame(loop);
+    if (!heroVisible) return;
+    ctx.clearRect(0, 0, W, H);
+    pts.forEach(p => { p.step(); p.draw(); });
+    drawLines();
+  })();
+}
 
 /* TYPEWRITER */
 const phrases = [
-  'Data Analyst · Healthcare & Compliance',
+  'Data and Reporting Analyst',
   'BI Developer · Tableau & Power BI',
-  'SQL & Python Expert',
-  'AWS Athena · Teradata · ML Pipelines',
+  'Advanced SQL · Python · R',
+  'AWS Athena · Teradata · S3 Data Lakes',
   'Turning Data Into Decisions'
 ];
 let pi = 0, ci = 0, del = false;
@@ -750,7 +760,7 @@ function type() {
   }
   setTimeout(type, del ? 35 : 75);
 }
-type();
+if (reduceMotion) { tel.textContent = phrases[0]; } else { type(); }
 
 /* NAV */
 const nav = document.getElementById('nav');
